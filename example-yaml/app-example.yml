@@ -1,0 +1,34 @@
+# aws-alb-ingress-controller sample 
+apiVersion: argoproj.io/v1alpha1 
+kind: Application 
+metadata: 
+  name: aws-alb-ingress-controller 
+  namespace: argocd 
+spec: 
+# Specifies which AppProject it belongs to. 
+#AppProject is a CRD of ArgoCD and can be used when restricting user's authority. 
+# Here, the default that already exists is used. 
+  project: default
+# Set the deployment destination. 
+#Here, it refers to the ArgoCD cluster, but you can specify a different Cluster. 
+  destination: 
+    namespace: kube-system 
+    server: https://kubernetes.default.svc
+ # Helm Specify the repository. You can also specify a Git repository. 
+# How to specify Git repository 
+# source: 
+# repoURL: https://github.com/argoproj/argocd-example-apps.git
+ # You can specify branches, tags, etc. 
+# targetRevision: HEAD 
+# Specify the path of Chart .. 
+# path: guestbook
+  source:
+    chart: aws-alb-ingress-controller
+    repoURL: http://storage.googleapis.com/kubernetes-charts-incubator
+    targetRevision: 0.1.10
+    helm:
+      parameters:
+      - name: clusterName
+        value: hogehoge
+
+# https://medium.com/sreake-jp/argocd-%E5%B0%8E%E5%85%A5%E7%B7%A8-3611eb005b2a

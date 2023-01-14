@@ -1,0 +1,85 @@
+time="2019-11-01T07:03:04Z" level=info msg="updated 'consumer-payout-service' operation (phase: Running)"
+time="2019-11-01T07:03:04Z" level=info msg="Initialized new operation: {&SyncOperation{Revision:f9485e7a92ca37cfac9cbbca7ed6483a9f78e5c2,Prune:false,DryRun:false,SyncStrategy:&SyncStrategy{Apply:nil,Hook:nil,},Resources:[],Source:nil,Manifests:[],}}" application=consumer-payout-service
+time="2019-11-01T07:03:04Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+W1101 07:03:04.662834       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:03:04Z" level=info msg=syncing application=consumer-payout-service isSelectiveSync=false skipHooks=false started=false
+time="2019-11-01T07:03:04Z" level=info msg=tasks application=consumer-payout-service isSelectiveSync=false tasks="[Sync/0 resource /ServiceAccount:local-consumer-staging/payout-service nil->obj (,,), Sync/0 resource /Service:local-consumer-staging/payout-service nil->obj (,,), Sync/0 resource extensions/Deployment:local-consumer-staging/payout-service nil->obj (,,)]"
+time="2019-11-01T07:03:04Z" level=info msg="Applying resource ServiceAccount/payout-service in cluster: https://192.168.0.1:443, namespace: local-consumer-staging"
+time="2019-11-01T07:03:04Z" level=info msg="kubectl --kubeconfig /dev/shm/175455981 -f - apply -n local-consumer-staging --dry-run" dir= execID=Fj0LH
+time="2019-11-01T07:03:04Z" level=info msg="Applying resource Service/payout-service in cluster: https://192.168.0.1:443, namespace: local-consumer-staging"
+time="2019-11-01T07:03:04Z" level=info msg="kubectl --kubeconfig /dev/shm/068518760 -f - apply -n local-consumer-staging --dry-run" dir= execID=aprkp
+time="2019-11-01T07:03:05Z" level=info msg="Applying resource Deployment/payout-service in cluster: https://192.168.0.1:443, namespace: local-consumer-staging"
+time="2019-11-01T07:03:05Z" level=info msg="kubectl --kubeconfig /dev/shm/015349159 -f - apply -n local-consumer-staging --dry-run" dir= execID=pqgzm
+time="2019-11-01T07:03:05Z" level=info msg="Updating operation state. phase: Running -> Running, message: '' -> 'one or more tasks are running'" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="Applying resource ServiceAccount/payout-service in cluster: https://192.168.0.1:443, namespace: local-consumer-staging"
+time="2019-11-01T07:03:05Z" level=info msg="kubectl --kubeconfig /dev/shm/520879322 -f - apply -n local-consumer-staging" dir= execID=T8n5x
+time="2019-11-01T07:03:05Z" level=info msg="Refreshing app status (controller refresh requested), level (1)" application=consumer-payout-service
+W1101 07:03:05.247078       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:03:05Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="adding resource result, status: 'Synced', phase: 'Running', message: 'serviceaccount/payout-service created'" application=consumer-payout-service kind=ServiceAccount name=payout-service namespace=local-consumer-staging phase=Sync
+time="2019-11-01T07:03:05Z" level=info msg="Applying resource Service/payout-service in cluster: https://192.168.0.1:443, namespace: local-consumer-staging"
+time="2019-11-01T07:03:05Z" level=info msg="kubectl --kubeconfig /dev/shm/209247345 -f - apply -n local-consumer-staging" dir= execID=dJtvN
+time="2019-11-01T07:03:05Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=1 time_ms=17.695217
+time="2019-11-01T07:03:05Z" level=info msg="Refreshing app status (controller refresh requested), level (1)" application=consumer-payout-service
+W1101 07:03:05.275050       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:03:05Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="No status changes. Skipping patch" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=1 time_ms=13.90272
+time="2019-11-01T07:03:05Z" level=info msg="Refreshing app status (controller refresh requested), level (1)" application=consumer-payout-service
+W1101 07:03:05.441197       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:03:05Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="adding resource result, status: 'Synced', phase: 'Running', message: 'service/payout-service created'" application=consumer-payout-service kind=Service name=payout-service namespace=local-consumer-staging phase=Sync
+time="2019-11-01T07:03:05Z" level=info msg="Applying resource Deployment/payout-service in cluster: https://192.168.0.1:443, namespace: local-consumer-staging"
+time="2019-11-01T07:03:05Z" level=info msg="kubectl --kubeconfig /dev/shm/207439132 -f - apply -n local-consumer-staging" dir= execID=EuA6Z
+time="2019-11-01T07:03:05Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=1 time_ms=18.617829
+time="2019-11-01T07:03:05Z" level=info msg="Refreshing app status (controller refresh requested), level (1)" application=consumer-payout-service
+W1101 07:03:05.557496       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:03:05Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="adding resource result, status: 'Synced', phase: 'Running', message: 'deployment.extensions/payout-service created'" application=consumer-payout-service kind=Deployment name=payout-service namespace=local-consumer-staging phase=Sync
+time="2019-11-01T07:03:05Z" level=info msg="Updating operation state. phase: Running -> Succeeded, message: 'one or more tasks are running' -> 'successfully synced (all tasks run)'" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="sync/terminate complete" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="Updated sync status: OutOfSync -> Synced" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" reason=ResourceUpdated type=Normal
+time="2019-11-01T07:03:05Z" level=info msg="Updated health status: Missing -> Progressing" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" reason=ResourceUpdated type=Normal
+time="2019-11-01T07:03:05Z" level=info msg="updated 'consumer-payout-service' operation (phase: Succeeded)"
+time="2019-11-01T07:03:05Z" level=info msg="Sync operation to f9485e7a92ca37cfac9cbbca7ed6483a9f78e5c2 succeeded" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" reason=OperationCompleted type=Normal
+time="2019-11-01T07:03:05Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:03:05Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=1 time_ms=73.40522
+time="2019-11-01T07:03:05Z" level=info msg="Refreshing app status (controller refresh requested), level (2)" application=consumer-payout-service
+W1101 07:03:05.630968       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:03:05Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+time="2019-11-01T07:03:06Z" level=info msg="Updated sync status: OutOfSync -> Synced" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" reason=ResourceUpdated type=Normal
+time="2019-11-01T07:03:06Z" level=info msg="Updated health status: Missing -> Progressing" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" reason=ResourceUpdated type=Normal
+time="2019-11-01T07:03:06Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:03:06Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=2 time_ms=1103.093613
+time="2019-11-01T07:03:06Z" level=info msg="Refreshing app status (controller refresh requested), level (1)" application=consumer-payout-service
+W1101 07:03:06.734098       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:03:06Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+time="2019-11-01T07:03:06Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:03:06Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=1 time_ms=20.545304
+time="2019-11-01T07:03:16Z" level=info msg="Refreshing app status (controller refresh requested), level (0)" application=consumer-payout-service
+time="2019-11-01T07:03:16Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:03:16Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=0 time_ms=24.00809
+time="2019-11-01T07:04:00Z" level=info msg="Refreshing app status (controller refresh requested), level (0)" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=0 time_ms=9.983031
+time="2019-11-01T07:04:00Z" level=info msg="Refreshing app status (controller refresh requested), level (0)" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="No status changes. Skipping patch" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=0 time_ms=2.595351
+time="2019-11-01T07:04:00Z" level=info msg="Refreshing app status (controller refresh requested), level (0)" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="No status changes. Skipping patch" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=0 time_ms=1.413686
+time="2019-11-01T07:04:00Z" level=info msg="Refreshing app status (controller refresh requested), level (1)" application=consumer-payout-service
+W1101 07:04:00.375276       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:04:00Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="Updated health status: Progressing -> Healthy" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" reason=ResourceUpdated type=Normal
+time="2019-11-01T07:04:00Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=1 time_ms=38.370309
+time="2019-11-01T07:04:00Z" level=info msg="Refreshing app status (controller refresh requested), level (1)" application=consumer-payout-service
+W1101 07:04:00.413705       1 listers.go:77] can not retrieve list of objects using index : Index with name namespace does not exist
+time="2019-11-01T07:04:00Z" level=info msg="Comparing app state (cluster: https://kubernetes.default.svc, namespace: local-consumer-staging)" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="Updated health status: Progressing -> Healthy" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" reason=ResourceUpdated type=Normal
+time="2019-11-01T07:04:00Z" level=info msg="Update successful" application=consumer-payout-service
+time="2019-11-01T07:04:00Z" level=info msg="Reconciliation completed" application=consumer-payout-service dest-namespace=local-consumer-staging dest-server="https://kubernetes.default.svc" fields.level=1 time_ms=22.732893
+

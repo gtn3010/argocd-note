@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: consumer-proxy-service
+spec:
+  destination:
+    namespace: local-consumer-staging
+    server: https://kubernetes.default.svc
+  project: consumer
+  source:
+    helm:
+      valueFiles:
+      - ../valuesStg.yaml
+    path: helmCharts/consumer_proxy-service
+    repoURL: https://nguyengt@bitbucket.org/nguyengt/argo-test.git
+    targetRevision: HEAD
